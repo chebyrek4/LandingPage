@@ -1,0 +1,262 @@
+
+
+
+.gallery .image-title,
+.gallery .image-description,
+.gallery .image-author,
+.gallery .image-link {
+	display:none;
+}
+
+.gallery
+{
+	width: 90%;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+.gallery ul.images
+{
+	list-style-type: none;
+	border: none;
+	padding: none;
+}
+
+.gallery ul.images li.image
+{
+	display: inline;
+	line-height: 0;
+}
+
+.gallery ul.images li.image a {
+	text-decoration: none;
+	color: inherit;
+	cursor: pointer;
+	
+	display: inline-block;
+	/*background: white;*/
+	opacity: 0.8;
+	padding: 3px;
+	line-height: 0;
+	-webkit-transition: -webkit-box-shadow 0.1s ease-out;
+	-moz-transition: -webkit-box-shadow 0.1s ease-out;
+	-o-transition: -webkit-box-shadow 0.1s ease-out;
+	transition: -webkit-box-shadow 0.1s ease-out;	
+}
+
+.gallery ul.images li.image a:hover {
+	opacity: 1;
+}
+
+.gallery ul.images li.image a img
+{
+	border: none;
+	
+}
+
+.gallery ul.images li.image a:hover
+{
+	-moz-box-shadow: 0px 0px 15px #EEE;
+	-webkit-box-shadow: 0px 0px 15px #EEE;
+	box-shadow: 0px 0px 15px #EEE;
+}
+
+@media screen and (max-width:600px) {
+	.gallery {
+		width: 90%;
+		text-align: center;
+		margin-left: auto;
+		margin-right: auto;
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.gallery ul.images li.image a {
+		margin-top: 10px;
+		margin-bottom: 0;
+		opacity: 1;
+	}
+}
+
+
+
+#lightbox, #lightbox-overlay {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	bottom:auto;
+	right:auto;
+	
+	z-index:100;
+	width:100%;
+	height:auto;
+	
+	text-align:center;
+	color:#333333;
+	
+	
+	margin:0px;
+	padding:0px;
+	border:none;
+	outline:none;
+	line-height:0;
+	
+	
+	text-decoration:none;
+	background:none;
+	word-spacing:normal;
+	letter-spacing:normal;
+	float:none;
+	clear:none;
+	display:block;
+}
+
+#lightbox a, #lightbox a:link, #lightbox a:visited, #lightbox a:hover {
+	text-decoration:underline;
+	color:#999999;
+}
+
+#lightbox-overlay {
+	z-index: 90;
+	background-color:#000000;
+	height: 100%;
+	position:fixed;
+}
+#lightbox-overlay-text {
+	text-align: right;
+	margin-right: 20px;
+	margin-top: 20px;
+	color: white;
+	font-size: 12px;
+	cursor: default;
+	line-height:normal;
+}
+#lightbox-overlay-text a, #lightbox-overlay-text a:hover, #lightbox-overlay-text a:visited, #lightbox-overlay-text a:link {
+	color:white;
+}
+#lightbox-overlay-text span {
+	padding-left:5px;
+	padding-right:5px;
+}
+
+#lightbox img, #lightbox a img, #lightbox a { border:none; outline:none; }
+
+#lightbox-imageBox {
+	position:relative;
+	border:1px solid black;
+	background-color:white;
+	width:400px;
+	height:400px;
+	margin:0 auto;
+	
+}
+
+#lightbox-imageContainer {
+	padding:1px;
+}
+
+#lightbox-loading {
+	position:absolute;
+	top:40%;
+	left:0%;
+	height:25%;
+	width:100%;
+	text-align:center;
+	line-height:0;
+}
+
+#lightbox-nav {
+	position:absolute;
+	top:0;
+	left:0;
+	height:100%;
+	width:100%;
+	z-index:10;
+}
+
+
+
+#lightbox-nav-btnPrev, #lightbox-nav-btnNext {
+	display:block;
+	width: 49%;
+	height: 100%;
+	background: transparent url("../images/blank.gif") no-repeat; 
+	zoom:1; 
+	
+	padding:0px;
+	margin:0px;
+}
+#lightbox-nav-btnPrev { 
+	left:0;
+	right:auto;
+	float:left;
+}
+#lightbox-nav-btnNext { 
+	left:auto;
+	right:0;
+	float:right;
+}
+
+
+#lightbox-infoBox {
+	font:10px Verdana, Helvetica, sans-serif;
+	background-color:#FFFFFF;
+	margin:0 auto;
+	padding:0px;
+	
+	
+}
+
+#lightbox-infoContainer {
+	padding-left:10px;
+	padding-right:10px;
+	padding-top:5px;
+	padding-bottom:5px;
+	color:#666;
+	
+	line-height:normal;
+	
+}
+#lightbox-infoHeader {
+	width:100%;
+	text-align:center; 
+}
+#lightbox-caption {
+	text-align:justify;
+}
+#lightbox-caption-title {
+	font-weight:bold;
+}
+#lightbox-caption-description {
+	font-weight:normal;
+}
+
+#lightbox-infoFooter {
+	margin-top:3px;
+	color:#999999;
+}
+#lightbox-currentNumber {
+	display:block;
+	width:49%;
+	float:left;
+	text-align:left;
+}
+#lightbox-close {
+	display:block;
+	width:45%;
+	float:right;
+	text-align:right;
+}
+#lightbox-close-button{
+	padding-left:30%;
+}
+#lightbox-close-button:hover {
+	color:#666666;
+}
+
+#lightbox-infoContainer-clear {
+	clear:both; 
+	visibility:hidden;
+}
